@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F06%2F06%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[欢迎来到徐博恒的博客 0v0第一篇博客，测试一下功能。 Title 标题Sub title 子标题Sub title 子子标题]]></content>
+      <categories>
+        <category>Hello World</category>
+      </categories>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+</search>

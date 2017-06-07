@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>徐博恒的博客</title>
+  <subtitle>Ekko&#39;s blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-06-07T06:06:18.308Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>徐博恒</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/06/06/hello-world/"/>
+    <id>http://yoursite.com/2017/06/06/hello-world/</id>
+    <published>2017-06-06T10:27:32.137Z</published>
+    <updated>2017-06-07T06:06:18.308Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;欢迎来到徐博恒的博客 0v0&lt;br&gt;第一篇博客，测试一下功能。&lt;/p&gt;
+&lt;h1 id=&quot;Title-标题&quot;&gt;&lt;a href=&quot;#Title-标题&quot; class=&quot;headerlink&quot; title=&quot;Title 标题&quot;&gt;&lt;/a&gt;Title 标题&lt;/h1&gt;&lt;h2 id=&quot;Su
+    
+    </summary>
+    
+      <category term="Hello World" scheme="http://yoursite.com/categories/Hello-World/"/>
+    
+    
+      <category term="Hello World" scheme="http://yoursite.com/tags/Hello-World/"/>
+    
+  </entry>
+  
+</feed>
