@@ -82,8 +82,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="徐博恒的博客" type="application/atom+xml" />
 
@@ -99,13 +97,12 @@
 
 <meta name="description" content="深自缄默，如云漂泊">
 <meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="徐博恒的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2017/08/index.html">
 <meta property="og:site_name" content="徐博恒的博客">
 <meta property="og:description" content="深自缄默，如云漂泊">
-<meta property="og:updated_time" content="2017-06-07T06:36:32.422Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="徐博恒的博客">
 <meta name="twitter:description" content="深自缄默，如云漂泊">
 
 
@@ -134,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2017/08/"/>
 
 
 
 
 
-  <title>分类 | 徐博恒的博客</title>
+  <title>归档 | 徐博恒的博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -166,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,27 +291,66 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-  <header class="post-header">
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共计 3 篇日志。 继续努力。
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 2 个分类
+
+      
+      
+      
+
+      
+        
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hello-World/">Hello World</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NIOP/">NIOP</a><span class="category-list-count">2</span></li></ul>
-        </div>
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2017/08/08/NOIP2015信息传递/" itemprop="url">
+              
+                <span itemprop="name">NOIP2015信息传递</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-08T19:29:31+08:00"
+              content="2017-08-08" >
+          08-08
+        </time>
       </div>
+
+    </header>
+  </article>
+
+
+
     
-  </div>
+
+  </section>
+
+  
+
 
 
           </div>
@@ -322,17 +358,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -540,10 +565,12 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
   
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   
 
@@ -561,18 +588,6 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/categories/index.html';
-          this.page.identifier = 'categories/index.html';
-          this.page.title = '分类';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
 
   
@@ -935,6 +950,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

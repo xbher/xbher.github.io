@@ -303,6 +303,188 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/08/NOIP2015信息传递/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="徐博恒">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/头像.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="徐博恒的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/08/NOIP2015信息传递/" itemprop="url">NOIP2015信息传递</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-08T19:29:31+08:00">
+                2017-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NIOP/" itemprop="url" rel="index">
+                    <span itemprop="name">NIOP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/08/NOIP2015信息传递/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/08/NOIP2015信息传递/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="NOIP2015-信息传递"><a href="#NOIP2015-信息传递" class="headerlink" title="NOIP2015 信息传递"></a>NOIP2015 信息传递</h1><blockquote>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://www.luogu.org/problem/show?pid=2661" target="_blank" rel="external">洛谷传送门</a>  </p>
+</blockquote>
+<p>有n个同学（编号为1到n）正在玩一个信息传递的游戏。在游戏里每人都有一个固定的信息传递对象，其中，编号为i的同学的信息传递对象是编号为Ti同学。  </p>
+<p>游戏开始时，每人都只知道自己的生日。之后每一轮中，所有人会同时将自己当前所知的生日信息告诉各自的信息传递对象（注意：可能有人可以从若干人那里获取信息，但是每人只会把信息告诉一个人，即自己的信息传递对象）。当有人从别人口中得知自己的生日时，游戏结束。请问该游戏一共可以进行几轮？  </p>
+<blockquote>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote>
+<p>输入文件名为 message.in。</p>
+<p>输入共2行。   </p>
+<p>第1行包含1个正整数n，表示n个人。   </p>
+<p>第2行包含n个用空格隔开的正整数T1,T2,…,Tn，其中第i个整数Ti表示编号为i的同学的信息传递对象是编号为Ti的同学，Ti&lt;=n且Ti≠i。  </p>
+<p>数据保证游戏一定会结束  </p>
+<blockquote>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote>
+<p>输出文件名为 message.out。   </p>
+<p>输出共1行，包含1个整数，表示游戏一共可以进行多少轮。  </p>
+<blockquote>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote>
+<p>5<br>2 4 2 3 1  </p>
+<blockquote>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote>
+<p>3  </p>
+<blockquote>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote>
+<p>【输入输出样例说明】  </p>
+<p><img src="https://ooo.0o0.ooo/2017/09/16/59bcf4aae28e4.png" alt="image"><br>游戏的流程如图所示。</p>
+<p>当进行完第 3 轮游戏后， 4 号玩家会听到 2 号玩家告诉他自<br>己的生日，所以答案为 3。</p>
+<p>当然，第 3 轮游戏后， 2 号玩家、 3 号玩家都能从自己的消息<br>来源得知自己的生日，同样符合游戏结束的条件。</p>
+<p>【数据范围】  </p>
+<p>对于 30%的数据， n ≤ 200；<br>对于 60%的数据， n ≤ 2500；<br>对于 100%的数据， n ≤ 200000。  </p>
+<blockquote>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote>
+<ul>
+<li>题意为找最小环  </li>
+<li>分析题意易得输入的图为环及其枝叶且不存在两个环在同一个联通块内的情况，于是bfs剪去枝叶，然后dfs出每个环的节点数并取最小值即可。  </li>
+</ul>
+<blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">#include &lt;queue&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;cstdlib&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">const int maxn=233333;</div><div class="line"></div><div class="line">int n,cur,ans=1&lt;&lt;30,out[maxn],vis[maxn];</div><div class="line"></div><div class="line">int dfs(int x)&#123;</div><div class="line">	if(vis[x]) return cur;</div><div class="line">	vis[x]=1;cur++;</div><div class="line">	int next=out[x];out[x]=0;</div><div class="line">	dfs(next);</div><div class="line">&#125;</div><div class="line"></div><div class="line">void cutting()&#123;</div><div class="line">	queue &lt;int&gt; q;</div><div class="line">	for(int i=1;i&lt;=n;i++) if(!vis[i]) q.push(i);</div><div class="line">	while(!q.empty())&#123;</div><div class="line">		int x=q.front();q.pop();</div><div class="line">		int next=out[x];out[x]=0;vis[next]--;</div><div class="line">		if(!vis[next]) q.push(next);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;out[i]);</div><div class="line">		vis[out[i]]++;</div><div class="line">	&#125;</div><div class="line">	cutting();</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		if(out[i])&#123;</div><div class="line">			cur=0;memset(vis,0,sizeof(vis));</div><div class="line">			ans=min(ans,dfs(i));</div><div class="line">		&#125;</div><div class="line">	printf(&quot;%d\n&quot;,ans);</div><div class="line">	//system(&quot;pause&quot;);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/16/NOIP2012借教室/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -419,7 +601,11 @@
 <p>第一行包含两个正整数n, m，表示天数和订单的数量。  </p>
 <p>第二行包含n个正整数，其中第i个数为ri，表示第i天可用于租借的教室数量。  </p>
 <p>接下来有m行，每行包含三个正整数dj, sj, tj ，表示租借的数量，租借开始、结束分别在第几天。</p>
-<p>每行相邻的两个数之间均用一个空格隔开。天数与订单均用从1开始的整数编号。  </p>
+<p>每行相邻的两个数之间均用一个空格隔开。天数与订单均用从1开始的整数编号。 </p>
+<blockquote>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote>
+<p>输出文件为 classroom.out。  </p>
+<p>如果所有订单均可满足，则输出只有一行，包含一个整数 0。否则（订单无法完全满足）输出两行，第一行输出一个负整数-1，第二行输出需要修改订单的申请人编号。  </p>
 <blockquote>
 <h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote>
 <p>4 3<br>2 5 4 3<br>2 1 3<br>3 2 4<br>4 2 4  </p>
@@ -668,7 +854,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
