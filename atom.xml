@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-16T11:45:01.504Z</updated>
+  <updated>2017-09-17T09:19:04.715Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Codeforces-853/A</title>
+    <link href="http://yoursite.com/2017/09/07/Codeforces-853-A/"/>
+    <id>http://yoursite.com/2017/09/07/Codeforces-853-A/</id>
+    <published>2017-09-07T14:17:42.000Z</published>
+    <updated>2017-09-17T09:19:04.715Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Codeforces-853-A-Planning&quot;&gt;&lt;a href=&quot;#Codeforces-853-A-Planning&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 853/A Planning&quot;&gt;&lt;/a&gt;Codeforces 
+    
+    </summary>
+    
+      <category term="Codeforces" scheme="http://yoursite.com/categories/Codeforces/"/>
+    
+    
+      <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
+    
+  </entry>
   
   <entry>
     <title>NOIP2015信息传递</title>
