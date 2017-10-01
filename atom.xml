@@ -1,100 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>徐博恒的博客</title>
+  <icon>https://www.gravatar.com/avatar/fe304d85ef8ac7cf724b57195fbacc2e</icon>
   <subtitle>Ekko&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-09-17T09:26:16.509Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://xbher.github.io/"/>
+  <updated>2017-10-01T10:35:13.674Z</updated>
+  <id>http://xbher.github.io/</id>
   
   <author>
     <name>徐博恒</name>
-    
+    <email>1374060574@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Codeforces-853/A</title>
-    <link href="http://yoursite.com/2017/09/07/Codeforces-853-A/"/>
-    <id>http://yoursite.com/2017/09/07/Codeforces-853-A/</id>
+    <link href="http://xbher.github.io/2017/09/07/Codeforces-853-A/"/>
+    <id>http://xbher.github.io/2017/09/07/Codeforces-853-A/</id>
     <published>2017-09-07T14:17:42.000Z</published>
-    <updated>2017-09-17T09:26:16.509Z</updated>
+    <updated>2017-10-01T10:35:13.674Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Codeforces-853-A-Planning"><a href="#Codeforces-853-A-Planning" class="headerlink" title="Codeforces 853/A Planning"></a>Codeforces 853/A Planning</h1><blockquote><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="http://codeforces.com/problemset/problem/853/A" target="_blank" rel="external">Codeforces</a></p></blockquote><p>Helen works in Metropolis airport. She is responsible for creating a departure schedule. There are n flights that must depart today, the i-th of them is planned to depart at the i-th minute of the day.  </p><p>Metropolis airport is the main transport hub of Metropolia, so it is difficult to keep the schedule intact. This is exactly the case today: because of technical issues, no flights were able to depart during the first k minutes of the day, so now the new departure schedule must be created.  </p><p>All n scheduled flights must now depart at different minutes between (k+1)-th and (k+n)-th, inclusive. However, it’s not mandatory for the flights to depart in the same order they were initially scheduled to do so — their order in the new schedule can be different. There is only one restriction: no flight is allowed to depart earlier than it was supposed to depart in the initial schedule.  </p><p>Helen knows that each minute of delay of the i-th flight costs airport ci burles. Help her find the order for flights to depart in the new schedule that minimizes the total cost for the airport.  </p><blockquote><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote><p>The first line contains two integers n and k (1≤k≤n≤300000), here n is the number of flights, and k is the number of minutes in the beginning of the day that the flights did not depart.  </p><p>The second line contains n integers c1,c2,…,cn (1≤ci≤107), here ci is the cost of delaying the i-th flight for one minute.  </p><blockquote><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote><p>The first line must contain the minimum possible total cost of delaying the flights.  </p><p>The second line must contain n different integers t1,t2,…,tn (k+1≤ti≤k+n), here ti is the minute when the i-th flight must depart. If there are several optimal schedules, print any of them.  </p><blockquote><h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote><p>5 2<br>4 2 1 10 2  </p><blockquote><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote><p>20<br>3 6 7 4 5   </p><blockquote><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote><p>【输入输出样例说明】<br>Let us consider sample test. If Helen just moves all flights 2 minutes later preserving the order, the total cost of delaying the flights would be (3-1)·4+(4-2)·2+(5-3)·1+(6-4)·10+(7-5)·2=38 burles.   </p><p>However, the better schedule is shown in the sample answer, its cost is (3-1)·4+(6-2)·2+(7-3)·1+(4-4)·10+(5-5)·2=20 burles.  </p><blockquote><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote><ul><li>其实这是一个水题，保证维护费最大的航班先飞，用优先队列贪心即可。</li><li>PS:注意花费要用long long,不然会炸</li></ul><blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">300500</span>;</div><div class="line"><span class="keyword">int</span> n,k;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> cost;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">flight</span>&#123;</span></div><div class="line"><span class="keyword">int</span> c,pos;</div><div class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> flight&amp;a)<span class="keyword">const</span>&#123;</div><div class="line"><span class="keyword">return</span> a.c&gt;c;</div><div class="line">&#125;</div><div class="line">&#125;f[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">f[i].pos=i;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;f[i].c);</div><div class="line">&#125;</div><div class="line">priority_queue &lt;flight&gt; q;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=k;i++) q.push(f[i]);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=k+<span class="number">1</span>;i&lt;=n+k;i++)&#123;</div><div class="line"><span class="keyword">if</span>(i&lt;=n) q.push(f[i]);</div><div class="line">flight now=q.top();q.pop();</div><div class="line">cost+=(<span class="keyword">long</span> <span class="keyword">long</span>)(i-now.pos)*now.c;</div><div class="line">f[now.pos].pos=i;</div><div class="line">&#125;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,cost);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,f[i].pos);</div><div class="line"><span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Codeforces-853-A-Planning&quot;&gt;&lt;a href=&quot;#Codeforces-853-A-Planning&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 853/A Planning&quot;&gt;&lt;/a&gt;Codeforces 
+      
+      
+        &lt;h1 id=&quot;Codeforces-853-A-Planning&quot;&gt;&lt;a href=&quot;#Codeforces-853-A-Planning&quot; class=&quot;headerlink&quot; title=&quot;Codeforces 853/A Planning&quot;&gt;&lt;/a&gt;Codeforces 
+      
     
     </summary>
     
-      <category term="Codeforces" scheme="http://yoursite.com/categories/Codeforces/"/>
+      <category term="Codeforces" scheme="http://xbher.github.io/categories/Codeforces/"/>
     
     
-      <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
+      <category term="Codeforces" scheme="http://xbher.github.io/tags/Codeforces/"/>
     
   </entry>
   
   <entry>
     <title>NOIP2015信息传递</title>
-    <link href="http://yoursite.com/2017/08/08/NOIP2015%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92/"/>
-    <id>http://yoursite.com/2017/08/08/NOIP2015信息传递/</id>
+    <link href="http://xbher.github.io/2017/08/08/NOIP2015%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92/"/>
+    <id>http://xbher.github.io/2017/08/08/NOIP2015信息传递/</id>
     <published>2017-08-08T11:29:31.000Z</published>
-    <updated>2017-09-16T11:45:01.504Z</updated>
+    <updated>2017-10-01T10:43:51.422Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="NOIP2015-信息传递"><a href="#NOIP2015-信息传递" class="headerlink" title="NOIP2015 信息传递"></a>NOIP2015 信息传递</h1><blockquote><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://www.luogu.org/problem/show?pid=2661" target="_blank" rel="external">洛谷传送门</a>  </p></blockquote><p>有n个同学（编号为1到n）正在玩一个信息传递的游戏。在游戏里每人都有一个固定的信息传递对象，其中，编号为i的同学的信息传递对象是编号为Ti同学。  </p><p>游戏开始时，每人都只知道自己的生日。之后每一轮中，所有人会同时将自己当前所知的生日信息告诉各自的信息传递对象（注意：可能有人可以从若干人那里获取信息，但是每人只会把信息告诉一个人，即自己的信息传递对象）。当有人从别人口中得知自己的生日时，游戏结束。请问该游戏一共可以进行几轮？  </p><blockquote><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote><p>输入文件名为 message.in。</p><p>输入共2行。   </p><p>第1行包含1个正整数n，表示n个人。   </p><p>第2行包含n个用空格隔开的正整数T1,T2,…,Tn，其中第i个整数Ti表示编号为i的同学的信息传递对象是编号为Ti的同学，Ti&lt;=n且Ti≠i。  </p><p>数据保证游戏一定会结束  </p><blockquote><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote><p>输出文件名为 message.out。   </p><p>输出共1行，包含1个整数，表示游戏一共可以进行多少轮。  </p><blockquote><h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote><p>5<br>2 4 2 3 1  </p><blockquote><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote><p>3  </p><blockquote><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote><p>【输入输出样例说明】  </p><p><img src="https://ooo.0o0.ooo/2017/09/16/59bcf4aae28e4.png" alt="image"><br>游戏的流程如图所示。</p><p>当进行完第 3 轮游戏后， 4 号玩家会听到 2 号玩家告诉他自<br>己的生日，所以答案为 3。</p><p>当然，第 3 轮游戏后， 2 号玩家、 3 号玩家都能从自己的消息<br>来源得知自己的生日，同样符合游戏结束的条件。</p><p>【数据范围】  </p><p>对于 30%的数据， n ≤ 200；<br>对于 60%的数据， n ≤ 2500；<br>对于 100%的数据， n ≤ 200000。  </p><blockquote><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote><ul><li>题意为找最小环  </li><li>分析题意易得输入的图为环及其枝叶且不存在两个环在同一个联通块内的情况，于是bfs剪去枝叶，然后dfs出每个环的节点数并取最小值即可。  </li></ul><blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">233333</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,cur,ans=<span class="number">1</span>&lt;&lt;<span class="number">30</span>,out[maxn],vis[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line"><span class="keyword">if</span>(vis[x]) <span class="keyword">return</span> cur;</div><div class="line">vis[x]=<span class="number">1</span>;cur++;</div><div class="line"><span class="keyword">int</span> next=out[x];out[x]=<span class="number">0</span>;</div><div class="line">dfs(next);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">cutting</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="built_in">queue</span> &lt;<span class="keyword">int</span>&gt; q;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(!vis[i]) q.push(i);</div><div class="line"><span class="keyword">while</span>(!q.empty())&#123;</div><div class="line"><span class="keyword">int</span> x=q.front();q.pop();</div><div class="line"><span class="keyword">int</span> next=out[x];out[x]=<span class="number">0</span>;vis[next]--;</div><div class="line"><span class="keyword">if</span>(!vis[next]) q.push(next);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;out[i]);</div><div class="line">vis[out[i]]++;</div><div class="line">&#125;</div><div class="line">cutting();</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line"><span class="keyword">if</span>(out[i])&#123;</div><div class="line">cur=<span class="number">0</span>;<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">ans=min(ans,dfs(i));</div><div class="line">&#125;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line"><span class="comment">//system("pause");</span></div><div class="line"><span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;NOIP2015-信息传递&quot;&gt;&lt;a href=&quot;#NOIP2015-信息传递&quot; class=&quot;headerlink&quot; title=&quot;NOIP2015 信息传递&quot;&gt;&lt;/a&gt;NOIP2015 信息传递&lt;/h1&gt;&lt;blockquote&gt;
+      
+      
+        &lt;h1 id=&quot;NOIP2015-信息传递&quot;&gt;&lt;a href=&quot;#NOIP2015-信息传递&quot; class=&quot;headerlink&quot; title=&quot;NOIP2015 信息传递&quot;&gt;&lt;/a&gt;NOIP2015 信息传递&lt;/h1&gt;&lt;blockquote&gt;
 &lt;h2 id=&quot;题目描述&quot;&gt;&lt;a
+      
     
     </summary>
     
-      <category term="NIOP" scheme="http://yoursite.com/categories/NIOP/"/>
+      <category term="NOIP" scheme="http://xbher.github.io/categories/NOIP/"/>
     
     
-      <category term="NOIP" scheme="http://yoursite.com/tags/NOIP/"/>
+      <category term="NOIP" scheme="http://xbher.github.io/tags/NOIP/"/>
     
   </entry>
   
   <entry>
     <title>NOIP2012借教室</title>
-    <link href="http://yoursite.com/2017/07/16/NOIP2012%E5%80%9F%E6%95%99%E5%AE%A4/"/>
-    <id>http://yoursite.com/2017/07/16/NOIP2012借教室/</id>
+    <link href="http://xbher.github.io/2017/07/16/NOIP2012%E5%80%9F%E6%95%99%E5%AE%A4/"/>
+    <id>http://xbher.github.io/2017/07/16/NOIP2012借教室/</id>
     <published>2017-07-16T09:26:09.000Z</published>
-    <updated>2017-09-16T11:44:49.588Z</updated>
+    <updated>2017-10-01T10:35:22.105Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="NOIP2012-借教室"><a href="#NOIP2012-借教室" class="headerlink" title="NOIP2012 借教室"></a>NOIP2012 借教室</h1><blockquote><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://www.luogu.org/problem/show?pid=1083" target="_blank" rel="external">洛谷传送门</a>  </p></blockquote><p>在大学期间，经常需要租借教室。大到院系举办活动，小到学习小组自习讨论，都需要向学校申请借教室。教室的大小功能不同，借教室人的身份不同，借教室的手续也不一样。</p><p>面对海量租借教室的信息，我们自然希望编程解决这个问题。</p><p>我们需要处理接下来n天的借教室信息，其中第i天学校有ri个教室可供租借。共有m份订单，每份订单用三个正整数描述，分别为dj, sj, tj ，表示某租借者需要从第sj 天到第tj 天租借教室（包括第sj天和第tj天），每天需要租借dj个教室。</p><p>我们假定，租借者对教室的大小、地点没有要求。即对于每份订单，我们只需要每天提供dj个教室，而它们具体是哪些教室，每天是否是相同的教室则不用考虑。  </p><p>借教室的原则是先到先得，也就是说我们要按照订单的先后顺序依次为每份订单分配教室。如果在分配的过程中遇到一份订单无法完全满足，则需要停止教室的分配，通知当前申请人修改订单。这里的无法满足指从第sj天到第tj天中有至少一天剩余的教室数量不足dj个。  </p><p>现在我们需要知道，是否会有订单无法完全满足。如果有，需要通知哪一个申请人修改订单。  </p><blockquote><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote><p>输入文件为 classroom.in。</p><p>第一行包含两个正整数n, m，表示天数和订单的数量。  </p><p>第二行包含n个正整数，其中第i个数为ri，表示第i天可用于租借的教室数量。  </p><p>接下来有m行，每行包含三个正整数dj, sj, tj ，表示租借的数量，租借开始、结束分别在第几天。</p><p>每行相邻的两个数之间均用一个空格隔开。天数与订单均用从1开始的整数编号。 </p><blockquote><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote><p>输出文件为 classroom.out。  </p><p>如果所有订单均可满足，则输出只有一行，包含一个整数 0。否则（订单无法完全满足）输出两行，第一行输出一个负整数-1，第二行输出需要修改订单的申请人编号。  </p><blockquote><h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote><p>4 3<br>2 5 4 3<br>2 1 3<br>3 2 4<br>4 2 4  </p><blockquote><h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote><p>-1<br>2  </p><blockquote><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote><p>【输入输出样例说明】  </p><p>第 1 份订单满足后，4 天剩余的教室数分别为 0，3，2，3。  </p><p>第 2 份订单要求第 2 天到<br>第 4 天每天提供 3 个教室，而第 3 天剩余的教室数为 2，因此无法满足。  </p><p>分配停止，通知第<br>2 个申请人修改订单。  </p><p>【数据范围】  </p><p>对于10%的数据，有1≤ n,m≤ 10；<br>对于30%的数据，有1≤ n,m≤1000；<br>对于 70%的数据，有1 ≤ n,m ≤ 10^5；<br>对于 100%的数据，有1 ≤ n,m ≤ 10^6,0 ≤ ri,dj≤ 10^9,1 ≤ sj≤ tj≤ n。  </p><blockquote><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote><ul><li>输入后暴力地修改区间直到该日教室数为负数？（然而只有40  </li><li>于是二分加上差分修改区间即可 </li><li>如何查分修改区间？<br>比如一开始数列a是0 0 0 0 0 0<br>前缀和0 0 0 0 0 0<br>3到5天需要2的教室<br>将a[3]+=2,a[6]-=2<br>数列变为0 0 2 0 0 -2<br>前缀和变为0 0 2 2 2 0<br>这样就实现了增加3-5需要的教室数<br>简单粗暴不是吗？  </li><li>怎样二分？<br>二分查找第一个为负数的订单输出即可  </li></ul><blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1005000</span>;</div><div class="line"><span class="keyword">int</span> n,m,l,r,ans,sum,a[maxn],ss[maxn];</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bill</span>&#123;</span></div><div class="line"><span class="keyword">int</span> d,s,t;</div><div class="line">&#125;b[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</div><div class="line"><span class="built_in">memset</span>(ss,<span class="number">0</span>,<span class="keyword">sizeof</span>(ss));sum=<span class="number">0</span>;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=v;i++)&#123;</div><div class="line">ss[b[i].s]+=b[i].d;ss[b[i].t+<span class="number">1</span>]-=b[i].d;</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">sum+=ss[i];</div><div class="line"><span class="keyword">if</span>(sum&gt;a[i]) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</div><div class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;b[i].d,&amp;b[i].s,&amp;b[i].t);</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> l=<span class="number">1</span>,r=m;</div><div class="line"><span class="keyword">while</span>(l&lt;=r)&#123;</div><div class="line"><span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line"><span class="keyword">if</span>(!judge(mid))</div><div class="line">ans=mid,r=mid<span class="number">-1</span>;</div><div class="line"><span class="keyword">else</span></div><div class="line">l=mid+<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(!ans) <span class="built_in">printf</span>(<span class="string">"0\n"</span>);</div><div class="line"><span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"-1\n%d\n"</span>,ans);</div><div class="line">getchar();getchar();getchar();getchar();getchar();</div><div class="line"><span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;NOIP2012-借教室&quot;&gt;&lt;a href=&quot;#NOIP2012-借教室&quot; class=&quot;headerlink&quot; title=&quot;NOIP2012 借教室&quot;&gt;&lt;/a&gt;NOIP2012 借教室&lt;/h1&gt;&lt;blockquote&gt;
+      
+      
+        &lt;h1 id=&quot;NOIP2012-借教室&quot;&gt;&lt;a href=&quot;#NOIP2012-借教室&quot; class=&quot;headerlink&quot; title=&quot;NOIP2012 借教室&quot;&gt;&lt;/a&gt;NOIP2012 借教室&lt;/h1&gt;&lt;blockquote&gt;
 &lt;h2 id=&quot;题目描述&quot;&gt;&lt;a hre
+      
     
     </summary>
     
-      <category term="NIOP" scheme="http://yoursite.com/categories/NIOP/"/>
+      <category term="NOIP" scheme="http://xbher.github.io/categories/NOIP/"/>
     
     
-      <category term="NOIP" scheme="http://yoursite.com/tags/NOIP/"/>
+      <category term="NOIP" scheme="http://xbher.github.io/tags/NOIP/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/06/06/hello-world/"/>
-    <id>http://yoursite.com/2017/06/06/hello-world/</id>
+    <link href="http://xbher.github.io/2017/06/06/hello-world/"/>
+    <id>http://xbher.github.io/2017/06/06/hello-world/</id>
     <published>2017-06-06T10:27:32.137Z</published>
-    <updated>2017-06-07T06:06:18.308Z</updated>
+    <updated>2017-10-01T10:55:04.063Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到徐博恒的博客 0v0<br>第一篇博客，测试一下功能。</p><h1 id="Title-标题"><a href="#Title-标题" class="headerlink" title="Title 标题"></a>Title 标题</h1><h2 id="Sub-title-子标题"><a href="#Sub-title-子标题" class="headerlink" title="Sub title 子标题"></a>Sub title 子标题</h2><h3 id="Sub-title-子子标题"><a href="#Sub-title-子子标题" class="headerlink" title="Sub title 子子标题"></a>Sub title 子子标题</h3>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;欢迎来到徐博恒的博客 0v0&lt;br&gt;第一篇博客，测试一下功能。&lt;/p&gt;
+      
+      
+        &lt;p&gt;欢迎来到徐博恒的博客 0v0&lt;br&gt;第一篇博客，测试一下功能。&lt;/p&gt;
 &lt;h1 id=&quot;Title-标题&quot;&gt;&lt;a href=&quot;#Title-标题&quot; class=&quot;headerlink&quot; title=&quot;Title 标题&quot;&gt;&lt;/a&gt;Title 标题&lt;/h1&gt;&lt;h2 id=&quot;Su
+      
     
     </summary>
     
-      <category term="Hello World" scheme="http://yoursite.com/categories/Hello-World/"/>
+      <category term="Hello World" scheme="http://xbher.github.io/categories/Hello-World/"/>
     
     
-      <category term="Hello World" scheme="http://yoursite.com/tags/Hello-World/"/>
+      <category term="Hello World" scheme="http://xbher.github.io/tags/Hello-World/"/>
     
   </entry>
   

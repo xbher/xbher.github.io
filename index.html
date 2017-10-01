@@ -1,15 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
@@ -21,6 +22,7 @@
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -60,17 +62,11 @@
   
 
   
-    
-      
-    
-
-    
-  
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Courier New:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -80,10 +76,10 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo, NexT, Ekko, Blog, Node.js, Git" />
 
 
 
@@ -94,7 +90,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.ico?v=5.1.2" />
 
 
 
@@ -104,7 +100,7 @@
 <meta name="description" content="深自缄默，如云漂泊">
 <meta property="og:type" content="website">
 <meta property="og:title" content="徐博恒的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://xbher.github.io/index.html">
 <meta property="og:site_name" content="徐博恒的博客">
 <meta property="og:description" content="深自缄默，如云漂泊">
 <meta name="twitter:card" content="summary">
@@ -117,10 +113,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -137,17 +135,31 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://xbher.github.io/"/>
 
 
 
 
+
+<!-- 网页加载条 -->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
 
   <title>徐博恒的博客</title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
@@ -157,12 +169,9 @@
 
 
 
+</head>
 
-
-
-
-
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -170,8 +179,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,8 +225,28 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -228,7 +256,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -237,12 +265,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
             
-            标签
+            留言
           </a>
         </li>
       
@@ -258,6 +286,218 @@
             搜索
           </a>
         </li>
+      
+
+
+      <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a title="把这个链接拖到你的工具栏中,任何网页都可以High" href='javascript:(
+    /*
+     * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
+     * Sina Weibo (http://weibo.com/Neveryu)
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
+    function go() {
+
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://7xoiki.com1.z0.glb.clouddn.com/Music-sunburst.mp3",
+                ""
+    ];
+
+    
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 2) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+            N();
+        }
+
+        e.src = i;
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+            e = document.createElement("audio");
+            e.setAttribute("class", l);
+            e.setAttribute("curSongIndex", 0);
+            e.id = "audio_element_id";
+            e.loop = false;
+            e.bgcolor = 0;
+            e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h();
+            go();
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        }
+    }
+    
+    initAudioEle();
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+
+    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+    })()'><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a> </li>
+      <!-- end High一下 -->
+
+
       
     </ul>
   
@@ -308,13 +548,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/Codeforces-853-A/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xbher.github.io/2017/09/07/Codeforces-853-A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="徐博恒">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/头像.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -376,17 +620,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/07/Codeforces-853-A/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/07/Codeforces-853-A/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -402,64 +635,52 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
+      <!-- 自定义，用于添加摘要图片，文章中不显示 -->
+        
+          <div class="out-img-topic">
+            <img src=images/used/Codeforces-853-A.jpg class="img-topic">
+          </div>
+        
+<!-- 自定义结束 -->
         
           
-            <h1 id="Codeforces-853-A-Planning"><a href="#Codeforces-853-A-Planning" class="headerlink" title="Codeforces 853/A Planning"></a>Codeforces 853/A Planning</h1><blockquote>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="http://codeforces.com/problemset/problem/853/A" target="_blank" rel="external">Codeforces</a></p>
-</blockquote>
-<p>Helen works in Metropolis airport. She is responsible for creating a departure schedule. There are n flights that must depart today, the i-th of them is planned to depart at the i-th minute of the day.  </p>
-<p>Metropolis airport is the main transport hub of Metropolia, so it is difficult to keep the schedule intact. This is exactly the case today: because of technical issues, no flights were able to depart during the first k minutes of the day, so now the new departure schedule must be created.  </p>
-<p>All n scheduled flights must now depart at different minutes between (k+1)-th and (k+n)-th, inclusive. However, it’s not mandatory for the flights to depart in the same order they were initially scheduled to do so — their order in the new schedule can be different. There is only one restriction: no flight is allowed to depart earlier than it was supposed to depart in the initial schedule.  </p>
-<p>Helen knows that each minute of delay of the i-th flight costs airport ci burles. Help her find the order for flights to depart in the new schedule that minimizes the total cost for the airport.  </p>
-<blockquote>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote>
-<p>The first line contains two integers n and k (1≤k≤n≤300000), here n is the number of flights, and k is the number of minutes in the beginning of the day that the flights did not depart.  </p>
-<p>The second line contains n integers c1,c2,…,cn (1≤ci≤107), here ci is the cost of delaying the i-th flight for one minute.  </p>
-<blockquote>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote>
-<p>The first line must contain the minimum possible total cost of delaying the flights.  </p>
-<p>The second line must contain n different integers t1,t2,…,tn (k+1≤ti≤k+n), here ti is the minute when the i-th flight must depart. If there are several optimal schedules, print any of them.  </p>
-<blockquote>
-<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote>
-<p>5 2<br>4 2 1 10 2  </p>
-<blockquote>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote>
-<p>20<br>3 6 7 4 5   </p>
-<blockquote>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote>
-<p>【输入输出样例说明】<br>Let us consider sample test. If Helen just moves all flights 2 minutes later preserving the order, the total cost of delaying the flights would be (3-1)·4+(4-2)·2+(5-3)·1+(6-4)·10+(7-5)·2=38 burles.   </p>
-<p>However, the better schedule is shown in the sample answer, its cost is (3-1)·4+(6-2)·2+(7-3)·1+(4-4)·10+(5-5)·2=20 burles.  </p>
-<blockquote>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote>
-<ul>
-<li>其实这是一个水题，保证维护费最大的航班先飞，用优先队列贪心即可。</li>
-<li>PS:注意花费要用long long,不然会炸</li>
-</ul>
-<blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">300500</span>;</div><div class="line"><span class="keyword">int</span> n,k;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> cost;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">flight</span>&#123;</span></div><div class="line">	<span class="keyword">int</span> c,pos;</div><div class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(<span class="keyword">const</span> flight&amp;a)<span class="keyword">const</span>&#123;</div><div class="line">		<span class="keyword">return</span> a.c&gt;c;</div><div class="line">	&#125;</div><div class="line">&#125;f[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;k);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">		f[i].pos=i;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;f[i].c);</div><div class="line">	&#125;</div><div class="line">	priority_queue &lt;flight&gt; q;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=k;i++) q.push(f[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=k+<span class="number">1</span>;i&lt;=n+k;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(i&lt;=n) q.push(f[i]);</div><div class="line">		flight now=q.top();q.pop();</div><div class="line">		cost+=(<span class="keyword">long</span> <span class="keyword">long</span>)(i-now.pos)*now.c;</div><div class="line">		f[now.pos].pos=i;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,cost);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,f[i].pos);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          Codeforces 853/A Planning
+题目描述Codeforces
+
+Helen works in Metropolis airport. She is responsible for creating a departure schedule. There are n flights
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/07/Codeforces-853-A/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
+  
+  </div>
 
     <footer class="post-footer">
       
@@ -473,6 +694,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -485,13 +710,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/08/NOIP2015信息传递/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xbher.github.io/2017/08/08/NOIP2015信息传递/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="徐博恒">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/头像.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -540,8 +769,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NIOP/" itemprop="url" rel="index">
-                    <span itemprop="name">NIOP</span>
+                  <a href="/categories/NOIP/" itemprop="url" rel="index">
+                    <span itemprop="name">NOIP</span>
                   </a>
                 </span>
 
@@ -552,17 +781,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/08/NOIP2015信息传递/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/08/NOIP2015信息传递/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -579,69 +797,53 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
+      <!-- 自定义，用于添加摘要图片，文章中不显示 -->
+        
+          <div class="out-img-topic">
+            <img src=images/used/NOIP2015信息传递.jpg class="img-topic">
+          </div>
+        
+<!-- 自定义结束 -->
         
           
-            <h1 id="NOIP2015-信息传递"><a href="#NOIP2015-信息传递" class="headerlink" title="NOIP2015 信息传递"></a>NOIP2015 信息传递</h1><blockquote>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://www.luogu.org/problem/show?pid=2661" target="_blank" rel="external">洛谷传送门</a>  </p>
-</blockquote>
-<p>有n个同学（编号为1到n）正在玩一个信息传递的游戏。在游戏里每人都有一个固定的信息传递对象，其中，编号为i的同学的信息传递对象是编号为Ti同学。  </p>
-<p>游戏开始时，每人都只知道自己的生日。之后每一轮中，所有人会同时将自己当前所知的生日信息告诉各自的信息传递对象（注意：可能有人可以从若干人那里获取信息，但是每人只会把信息告诉一个人，即自己的信息传递对象）。当有人从别人口中得知自己的生日时，游戏结束。请问该游戏一共可以进行几轮？  </p>
-<blockquote>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote>
-<p>输入文件名为 message.in。</p>
-<p>输入共2行。   </p>
-<p>第1行包含1个正整数n，表示n个人。   </p>
-<p>第2行包含n个用空格隔开的正整数T1,T2,…,Tn，其中第i个整数Ti表示编号为i的同学的信息传递对象是编号为Ti的同学，Ti&lt;=n且Ti≠i。  </p>
-<p>数据保证游戏一定会结束  </p>
-<blockquote>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote>
-<p>输出文件名为 message.out。   </p>
-<p>输出共1行，包含1个整数，表示游戏一共可以进行多少轮。  </p>
-<blockquote>
-<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote>
-<p>5<br>2 4 2 3 1  </p>
-<blockquote>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote>
-<p>3  </p>
-<blockquote>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote>
-<p>【输入输出样例说明】  </p>
-<p><img src="https://ooo.0o0.ooo/2017/09/16/59bcf4aae28e4.png" alt="image"><br>游戏的流程如图所示。</p>
-<p>当进行完第 3 轮游戏后， 4 号玩家会听到 2 号玩家告诉他自<br>己的生日，所以答案为 3。</p>
-<p>当然，第 3 轮游戏后， 2 号玩家、 3 号玩家都能从自己的消息<br>来源得知自己的生日，同样符合游戏结束的条件。</p>
-<p>【数据范围】  </p>
-<p>对于 30%的数据， n ≤ 200；<br>对于 60%的数据， n ≤ 2500；<br>对于 100%的数据， n ≤ 200000。  </p>
-<blockquote>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote>
-<ul>
-<li>题意为找最小环  </li>
-<li>分析题意易得输入的图为环及其枝叶且不存在两个环在同一个联通块内的情况，于是bfs剪去枝叶，然后dfs出每个环的节点数并取最小值即可。  </li>
-</ul>
-<blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">233333</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,cur,ans=<span class="number">1</span>&lt;&lt;<span class="number">30</span>,out[maxn],vis[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span>(vis[x]) <span class="keyword">return</span> cur;</div><div class="line">	vis[x]=<span class="number">1</span>;cur++;</div><div class="line">	<span class="keyword">int</span> next=out[x];out[x]=<span class="number">0</span>;</div><div class="line">	dfs(next);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">cutting</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">queue</span> &lt;<span class="keyword">int</span>&gt; q;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="keyword">if</span>(!vis[i]) q.push(i);</div><div class="line">	<span class="keyword">while</span>(!q.empty())&#123;</div><div class="line">		<span class="keyword">int</span> x=q.front();q.pop();</div><div class="line">		<span class="keyword">int</span> next=out[x];out[x]=<span class="number">0</span>;vis[next]--;</div><div class="line">		<span class="keyword">if</span>(!vis[next]) q.push(next);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;out[i]);</div><div class="line">		vis[out[i]]++;</div><div class="line">	&#125;</div><div class="line">	cutting();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		<span class="keyword">if</span>(out[i])&#123;</div><div class="line">			cur=<span class="number">0</span>;<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">			ans=min(ans,dfs(i));</div><div class="line">		&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">	<span class="comment">//system("pause");</span></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          NOIP2015 信息传递
+题目描述洛谷传送门  
+
+有n个同学（编号为1到n）正在玩一个信息传递的游戏。在游戏里每人都有一个固定的信息传递对象，其中，编号为i的同学的信息传递对象是编号为Ti同学。  
+游戏开始时，每人都只知道自己的生日。之后每一轮中，所有人会同时将自己当前所知的生日信息告诉各自的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/08/NOIP2015信息传递/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
+  
+  </div>
 
     <footer class="post-footer">
       
@@ -655,6 +857,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -667,13 +873,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/16/NOIP2012借教室/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xbher.github.io/2017/07/16/NOIP2012借教室/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="徐博恒">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/头像.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -722,8 +932,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NIOP/" itemprop="url" rel="index">
-                    <span itemprop="name">NIOP</span>
+                  <a href="/categories/NOIP/" itemprop="url" rel="index">
+                    <span itemprop="name">NOIP</span>
                   </a>
                 </span>
 
@@ -734,17 +944,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/16/NOIP2012借教室/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/16/NOIP2012借教室/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -761,75 +960,54 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
+      <!-- 自定义，用于添加摘要图片，文章中不显示 -->
+        
+          <div class="out-img-topic">
+            <img src=images/used/NOIP2012借教室.jpg class="img-topic">
+          </div>
+        
+<!-- 自定义结束 -->
         
           
-            <h1 id="NOIP2012-借教室"><a href="#NOIP2012-借教室" class="headerlink" title="NOIP2012 借教室"></a>NOIP2012 借教室</h1><blockquote>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://www.luogu.org/problem/show?pid=1083" target="_blank" rel="external">洛谷传送门</a>  </p>
-</blockquote>
-<p>在大学期间，经常需要租借教室。大到院系举办活动，小到学习小组自习讨论，都需要向学校申请借教室。教室的大小功能不同，借教室人的身份不同，借教室的手续也不一样。</p>
-<p>面对海量租借教室的信息，我们自然希望编程解决这个问题。</p>
-<p>我们需要处理接下来n天的借教室信息，其中第i天学校有ri个教室可供租借。共有m份订单，每份订单用三个正整数描述，分别为dj, sj, tj ，表示某租借者需要从第sj 天到第tj 天租借教室（包括第sj天和第tj天），每天需要租借dj个教室。</p>
-<p>我们假定，租借者对教室的大小、地点没有要求。即对于每份订单，我们只需要每天提供dj个教室，而它们具体是哪些教室，每天是否是相同的教室则不用考虑。  </p>
-<p>借教室的原则是先到先得，也就是说我们要按照订单的先后顺序依次为每份订单分配教室。如果在分配的过程中遇到一份订单无法完全满足，则需要停止教室的分配，通知当前申请人修改订单。这里的无法满足指从第sj天到第tj天中有至少一天剩余的教室数量不足dj个。  </p>
-<p>现在我们需要知道，是否会有订单无法完全满足。如果有，需要通知哪一个申请人修改订单。  </p>
-<blockquote>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote>
-<p>输入文件为 classroom.in。</p>
-<p>第一行包含两个正整数n, m，表示天数和订单的数量。  </p>
-<p>第二行包含n个正整数，其中第i个数为ri，表示第i天可用于租借的教室数量。  </p>
-<p>接下来有m行，每行包含三个正整数dj, sj, tj ，表示租借的数量，租借开始、结束分别在第几天。</p>
-<p>每行相邻的两个数之间均用一个空格隔开。天数与订单均用从1开始的整数编号。 </p>
-<blockquote>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote>
-<p>输出文件为 classroom.out。  </p>
-<p>如果所有订单均可满足，则输出只有一行，包含一个整数 0。否则（订单无法完全满足）输出两行，第一行输出一个负整数-1，第二行输出需要修改订单的申请人编号。  </p>
-<blockquote>
-<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote>
-<p>4 3<br>2 5 4 3<br>2 1 3<br>3 2 4<br>4 2 4  </p>
-<blockquote>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote>
-<p>-1<br>2  </p>
-<blockquote>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote>
-<p>【输入输出样例说明】  </p>
-<p>第 1 份订单满足后，4 天剩余的教室数分别为 0，3，2，3。  </p>
-<p>第 2 份订单要求第 2 天到<br>第 4 天每天提供 3 个教室，而第 3 天剩余的教室数为 2，因此无法满足。  </p>
-<p>分配停止，通知第<br>2 个申请人修改订单。  </p>
-<p>【数据范围】  </p>
-<p>对于10%的数据，有1≤ n,m≤ 10；<br>对于30%的数据，有1≤ n,m≤1000；<br>对于 70%的数据，有1 ≤ n,m ≤ 10^5；<br>对于 100%的数据，有1 ≤ n,m ≤ 10^6,0 ≤ ri,dj≤ 10^9,1 ≤ sj≤ tj≤ n。  </p>
-<blockquote>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote>
-<ul>
-<li>输入后暴力地修改区间直到该日教室数为负数？（然而只有40  </li>
-<li>于是二分加上差分修改区间即可 </li>
-<li>如何查分修改区间？<br>比如一开始数列a是0 0 0 0 0 0<br>前缀和0 0 0 0 0 0<br>3到5天需要2的教室<br>将a[3]+=2,a[6]-=2<br>数列变为0 0 2 0 0 -2<br>前缀和变为0 0 2 2 2 0<br>这样就实现了增加3-5需要的教室数<br>简单粗暴不是吗？  </li>
-<li>怎样二分？<br>二分查找第一个为负数的订单输出即可  </li>
-</ul>
-<blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1005000</span>;</div><div class="line"><span class="keyword">int</span> n,m,l,r,ans,sum,a[maxn],ss[maxn];</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bill</span>&#123;</span></div><div class="line">	<span class="keyword">int</span> d,s,t;</div><div class="line">&#125;b[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</div><div class="line">	<span class="built_in">memset</span>(ss,<span class="number">0</span>,<span class="keyword">sizeof</span>(ss));sum=<span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=v;i++)&#123;</div><div class="line">		ss[b[i].s]+=b[i].d;ss[b[i].t+<span class="number">1</span>]-=b[i].d;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</div><div class="line">		sum+=ss[i];</div><div class="line">		<span class="keyword">if</span>(sum&gt;a[i]) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;b[i].d,&amp;b[i].s,&amp;b[i].t);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> l=<span class="number">1</span>,r=m;</div><div class="line">	<span class="keyword">while</span>(l&lt;=r)&#123;</div><div class="line">		<span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span>(!judge(mid))</div><div class="line">			ans=mid,r=mid<span class="number">-1</span>;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			l=mid+<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(!ans) <span class="built_in">printf</span>(<span class="string">"0\n"</span>);</div><div class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"-1\n%d\n"</span>,ans);</div><div class="line">	getchar();getchar();getchar();getchar();getchar();</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          NOIP2012 借教室
+题目描述洛谷传送门  
+
+在大学期间，经常需要租借教室。大到院系举办活动，小到学习小组自习讨论，都需要向学校申请借教室。教室的大小功能不同，借教室人的身份不同，借教室的手续也不一样。
+面对海量租借教室的信息，我们自然希望编程解决这个问题。
+我们需要处理接下来n天的借教室信息
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/16/NOIP2012借教室/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
+  
+  </div>
 
     <footer class="post-footer">
       
@@ -843,6 +1021,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -855,13 +1037,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/06/hello-world/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xbher.github.io/2017/06/06/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="徐博恒">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/头像.png">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -923,17 +1109,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/06/06/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/06/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -949,32 +1124,50 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
+      <!-- 自定义，用于添加摘要图片，文章中不显示 -->
+        
+          <div class="out-img-topic">
+            <img src=hello-world.jpg class="img-topic">
+          </div>
+        
+<!-- 自定义结束 -->
         
           
-            <p>欢迎来到徐博恒的博客 0v0<br>第一篇博客，测试一下功能。</p>
-<h1 id="Title-标题"><a href="#Title-标题" class="headerlink" title="Title 标题"></a>Title 标题</h1><h2 id="Sub-title-子标题"><a href="#Sub-title-子标题" class="headerlink" title="Sub title 子标题"></a>Sub title 子标题</h2><h3 id="Sub-title-子子标题"><a href="#Sub-title-子子标题" class="headerlink" title="Sub title 子子标题"></a>Sub title 子子标题</h3>
+          欢迎来到徐博恒的博客 0v0第一篇博客，测试一下功能。
+Title 标题Sub title 子标题Sub title 子子标题
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/06/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
+  
+  </div>
 
     <footer class="post-footer">
       
@@ -988,6 +1181,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1016,6 +1213,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -1024,19 +1222,22 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/头像.png"
-               alt="徐博恒" />
-          <p class="site-author-name" itemprop="name">徐博恒</p>
-           
-              <p class="site-description motion-element" itemprop="description">深自缄默，如云漂泊</p>
           
+            <img class="site-author-image" itemprop="image"
+              src="/images/avatar.png"
+              alt="徐博恒" />
+          
+            <p class="site-author-name" itemprop="name">徐博恒</p>
+            <p class="site-description motion-element" itemprop="description">深自缄默，如云漂泊</p>
         </div>
+
         <nav class="site-state motion-element">
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives">
+            
+              <a href="/archives/">
+            
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -1078,12 +1279,40 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xbher" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+          
         </div>
 
         
         
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="/weblog" title="建站日志" target="_blank">建站日志</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -1113,22 +1342,50 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">徐博恒</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
 
 <div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
+  <div class="powered-by"></div>
+  <span class="post-count" style="color: #e90f92;">全站共 2.4k 字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      您是第
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      个小伙伴
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站共浏览
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
 </div>
 
 
-        
+
+
+
+
+
 
         
       </div>
@@ -1199,38 +1456,37 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
   
 
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
-    
+  
 
-    
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
 
   
 
@@ -1255,10 +1511,6 @@
 
 
 
-  
-
-
-
 
 
 
@@ -1272,7 +1524,7 @@
     var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
-    } else if (search_path.endsWith("json")) {
+    } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
     var path = "/" + search_path;
@@ -1611,13 +1863,52 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
   
 
   
+
+
+    <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+  <script type="text/javascript">var OriginTitile=document.title,st;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="喵喵喵？!",clearTimeout(st)):(document.title="Thank Back~ "+OriginTitile,st=setTimeout(function(){document.title=OriginTitile},4e3))})</script>
+
+    <!-- 按需加载背景 -->
+  <!-- 识别手机或电脑的js开始 -->  
+  <script type="text/javascript">   
+  (function(){  
+    var res = GetRequest();  
+    var par = res['index'];  
+    if(par!='gfan'){  
+      var ua=navigator.userAgent.toLowerCase();  
+      var contains=function (a, b){  
+          if(a.indexOf(b)!=-1){return true;}  
+      };   
+      if((contains(ua,"android") && contains(ua,"mobile"))||(contains(ua,"android") && contains(ua,"mozilla"))||(contains(ua,"android") && contains(ua,"opera"))||contains(ua,"ucweb7")||contains(ua,"iphone")){
+        return false;
+      } else {
+        $.getScript("/js/src/particle.js");
+      }
+    }  
+  })();  
+  function GetRequest() {  
+    var url = location.search;
+    var theRequest = new Object();  
+    if (url.indexOf("?") != -1) {  
+      var str = url.substr(1);  
+      strs = str.split("&");  
+      for(var i = 0; i < strs.length; i ++) {  
+        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+      }  
+    }  
+    return theRequest;  
+  }  
+  </script>  
+  <!-- 识别手机或电脑的js结束 -->  
 
 </body>
 </html>
