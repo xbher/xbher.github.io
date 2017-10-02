@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>徐博恒的博客</title>
+  <title>Echo的博客</title>
   <icon>https://www.gravatar.com/avatar/fe304d85ef8ac7cf724b57195fbacc2e</icon>
-  <subtitle>Ekko&#39;s blog</subtitle>
+  <subtitle>以梦为马，不负韶华</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xbher.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://xbher.github.io/</id>
   
   <author>
-    <name>徐博恒</name>
+    <name>Echo</name>
     <email>1374060574@qq.com</email>
   </author>
   
