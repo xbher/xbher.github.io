@@ -105,7 +105,8 @@
 <meta property="og:site_name" content="Echo的博客">
 <meta property="og:description" content="NOIP2016蚯蚓 题目描述 洛谷传送门  本题中，我们将用符号⌊c⌋表示对c向下取整，例如：⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3 蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。 蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓">
 <meta property="og:image" content="https://i.loli.net/2017/10/04/59d48c0dadaaf.png">
-<meta property="og:updated_time" content="2017-10-04T07:56:37.185Z">
+<meta property="og:image" content="https://i.loli.net/2017/10/04/59d498e1c76cd.png">
+<meta property="og:updated_time" content="2017-10-04T08:18:09.534Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP2016蚯蚓">
 <meta name="twitter:description" content="NOIP2016蚯蚓 题目描述 洛谷传送门  本题中，我们将用符号⌊c⌋表示对c向下取整，例如：⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3 蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。 蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓">
@@ -721,11 +722,11 @@
 <ol>
 <li>假设有两只蚯蚓长度分别为x，y，且x&gt;y；那么根据题意x一定被先切，于是我们假设y在x被切后i秒被切。</li>
 <li>假设x被切成x1和x2两段，y被切成y1和y2两段；</li>
-<li>易得<br>x1=⌊p<em>x1⌋+i</em>q,x2=x-(⌊p<em>x1⌋+i</em>q);<br>y1=⌊p<em>(y+i</em>q)⌋,y2=y+i<em>q-⌊p</em>(y+i*q)⌋;  </li>
+<li>易得<br><img src="https://i.loli.net/2017/10/04/59d498e1c76cd.png" alt=""></li>
 <li>由上可得x1&gt;y1;x2&gt;y2;</li>
 </ol>
 <ul>
-<li>于是我们开3个队列<br>qs存储未被切的，(已从大到小排序<br>q1存储⌊p<em>x⌋，<br>q2存储⌊x-p</em>x⌋;</li>
+<li>于是我们开3个队列<br>qs存储未被切的，(已从大到小排序<br>q1存储 p<em>x，<br>q2存储 x-p</em>x;</li>
 <li>由前面可得每个队列都是单调的（此处即由大到小的</li>
 <li>于是每次取3个堆首的最大元素模拟即可</li>
 <li>ps：还要保存一个时间戳表示蚯蚓增加的长度，每次取出时加上，放回时减去</li>
