@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[NOIP2016蚯蚓]]></title>
+    <url>%2F2017%2F10%2F04%2FNOIP2016%E8%9A%AF%E8%9A%93%2F</url>
+    <content type="text"><![CDATA[NOIP2016蚯蚓 题目描述 洛谷传送门 本题中，我们将用符号⌊c⌋表示对c向下取整，例如：⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3 蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。 蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓）。 每一秒，神刀手会在所有的蚯蚓中，准确地找到最长的那一只（如有多个则任选一个）将其切成两半。神刀手切开蚯蚓的位置由常数p(是满足0&lt;p&lt;1的有理数)决定，设这只蚯蚓长度为x，神刀手会将其切成两只长度分别为⌊px⌋和x−⌊px⌋的蚯蚓。特殊地，如果这两个数的其中一个等于0，则这个长度为0的蚯蚓也会被保留。此外，除了刚刚产生的两只新蚯蚓，其余蚯蚓的长度都会增加q(是一个非负整常数)。 蛐蛐国王知道这样不是长久之计，因为蚯蚓不仅会越来越多，还会越来越长。蛐蛐国王决定求助于一位有着洪荒之力的神秘人物，但是救兵还需要m秒才能到来……(m为非负整数） 蛐蛐国王希望知道这m秒内的战况。具体来说，他希望知道： m秒内，每一秒被切断的蚯蚓被切断前的长度（有m个数） m秒后，所有蚯蚓的长度（有n+m个数)。 蛐蛐国王当然知道怎么做啦！但是他想考考你…… 输入 输入文件名为earthworm.in。 第一行包含六个整数n,m,q,u,v,t，其中： n,m,q的意义见【问题描述】； u,v,t均为正整数； 你需要自己计算p=u/v(保证0&lt;u&lt;v); t是输出参数，其含义将会在【输出格式】中解释。 第二行包含n个非负整数，为ai,a2,…,an，即初始时n只蚯蚓的长度。 同一行中相邻的两个数之间，恰好用一个空格隔开。 保证1≤n≤10^5​​，0&lt;m≤7∗10^6​​，0≤u&lt;v≤10^9​​，0≤q≤200，1≤t≤71，0&lt;ai≤10^8​​。 输出 输出文件名为earthworm.out。 第一行输出⌊m/t⌋个整数，按时间顺序，依次输出第t秒，第2t秒，第3t秒……被切断蚯蚓（在被切断前）的长度。 第二行输出⌊(n+m)/t⌋个整数，输出m秒后蚯蚓的长度；需要按从大到小的顺序，依次输出排名第t，第2t，第3t……的长度。 同一行中相邻的两个数之间，恰好用一个空格隔开。即使某一行没有任何数需要 输出，你也应输出一个空行。 请阅读样例来更好地理解这个格式。 样例输入 输入样例#1：3 7 1 1 3 13 3 2 输入样例#2：3 7 1 1 3 23 3 2 输入样例#3：3 7 1 1 3 93 3 2 样例输出 输出样例#1：3 4 4 4 5 5 66 6 6 5 5 4 4 3 2 2 输出样例#2：4 4 56 5 4 3 2 输出样例#3：//空行2 说明 【输入输出样例说明】 【样例解释1】在神刀手到来前：3只蚯蚓的长度为3,3,2。 1秒后：一只长度为3的蚯蚓被切成了两只长度分别为1和2的蚯蚓，其余蚯蚓的长度增加了1。最终4只蚯蚓的长度分别为(1,2),4,3。括号表示这个位置刚刚有一只蚯蚓被切断 2秒后：一只长度为4的蚯蚓被切成了1和3。5只蚯蚓的长度分别为：2,3,(1,3),4。 3秒后：一只长度为4的蚯蚓被切断。6只蚯蚓的长度分别为：3,4,2,4,(1,3)。 4秒后：一只长度为4的蚯蚓被切断。7只蚯蚓的长度分别为：4,(1,3),3,5,2,4。 5秒后：一只长度为5的蚯蚓被切断。8只蚯蚓的长度分别为：5,2,4,4,(1,4),3,5。 6秒后：一只长度为5的蚯蚓被切断。9只蚯蚓的长度分别为：（1,4),3,5,5,2,5,4,6。 7秒后：一只长度为6的蚯蚓被切断。10只蚯蚓的长度分别为：2,5,4,6,6,3,6,5,(2,4)。 所以，7秒内被切断的蚯蚓的长度依次为3,4,4,4,5,5,6。 7秒后，所有蚯蚓长度从大到小排序为6,6,6,5,5,4,4,3,2,2。 【样例解释2】这个数据中只有t=2与上个数据不同。只需在每行都改为每两个数输出一个数即可。 虽然第一行最后有一个6没有被输出，但是第二行仍然要重新从第二个数再开始输出。 【样例解释3】这个数据中只有t=9与上个数据不同。 注意第一行没有数要输出，但也要输出一个空行。 【数据范围】 题解 乍一看题目，woc这一优先队列大水题啊，然后用priority_queue来xjb搞，最后发现priority_queue这个东西它没有迭代器…… 最后发现正解又简单又短（就是太难想了 瞎扯淡结束，我们来讲题目： 假设有两只蚯蚓长度分别为x，y，且x&gt;y；那么根据题意x一定被先切，于是我们假设y在x被切后i秒被切。 假设x被切成x1和x2两段，y被切成y1和y2两段； 易得x1=⌊px1⌋+iq,x2=x-(⌊px1⌋+iq);y1=⌊p(y+iq)⌋,y2=y+iq-⌊p(y+i*q)⌋; 由上可得x1&gt;y1;x2&gt;y2; 于是我们开3个队列qs存储未被切的，(已从大到小排序q1存储⌊px⌋，q2存储⌊x-px⌋; 于是每次去3个堆首的最大元素模拟即可 ps：还要保存一个时间戳表示蚯蚓增加的长度，每次取出时加上，放回时减去 代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include &lt;cstdio&gt;#include &lt;queue&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;using namespace std;const int maxn=100050;int n,m,q,u,v,t,add,a[maxn];queue &lt;int&gt; qs,q1,q2;int cmp(int x,int y)&#123; return x&gt;y;&#125;int get_front(queue &lt;int&gt; &amp;y)&#123; return y.empty()?-0x3f3f3f:y.front()+add;&#125;int compare_front()&#123; int a=get_front(qs),b=get_front(q1),c=get_front(q2), mx=max(a,max(b,c)); if(mx==a) qs.pop(); else if(mx==b) q1.pop(); else if(mx==c) q2.pop(); return mx;&#125;int main()&#123; scanf("%d%d%d%d%d%d",&amp;n,&amp;m,&amp;q,&amp;u,&amp;v,&amp;t); for(int i=1;i&lt;=n;i++) scanf("%d",a+i); sort(a+1,a+n+1,cmp); for(int i=1;i&lt;=n;i++) qs.push(a[i]); for(int i=1;i&lt;=m;add+=q,i++)&#123; int cur=compare_front(), l1=(long long)cur*u/v, l2=cur-l1; q1.push(l1-add-q);q2.push(l2-add-q); if(i%t==0) printf("%d ",cur); &#125; printf("\n"); for(int i=1;i&lt;=n+m;i++) i%t==0?printf("%d ",compare_front()):compare_front(); printf("\n"); return 0;&#125;]]></content>
+      <categories>
+        <category>NOIP</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>单调队列</tag>
+        <tag>模拟</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NOIP2015跳石头]]></title>
+    <url>%2F2017%2F10%2F04%2FNOIP2015%E8%B7%B3%E7%9F%B3%E5%A4%B4%2F</url>
+    <content type="text"><![CDATA[NOIP2015跳石头 题目描述 洛谷传送门 一年一度的“跳石头”比赛又要开始了! 这项比赛将在一条笔直的河道中进行,河道中分布着一些巨大岩石。组委会已经选择好了两块岩石作为比赛起点和终点。在起点和终点之间,有 N 块岩石(不含起点和终 点的岩石)。在比赛过程中,选手们将从起点出发,每一步跳向相邻的岩石,直至到达终点。 为了提高比赛难度,组委会计划移走一些岩石,使得选手们在比赛过程中的最短跳 跃距离尽可能长。由于预算限制,组委会至多从起点和终点之间移走 M 块岩石(不能 移走起点和终点的岩石)。 输入 输入文件名为 stone.in。 输入文件第一行包含三个整数 L,N,M,分别表示起点到终点的距离,起点和终 点之间的岩石数,以及组委会至多移走的岩石数。 接下来 N 行,每行一个整数,第 i 行的整数 Di(0 &lt; Di &lt; L)表示第 i 块岩石与 起点的距离。这些岩石按与起点距离从小到大的顺序给出,且不会有两个岩石出现在同 一个位置。 输出 输出文件名为 stone.out。 输出文件只包含一个整数,即最短跳跃距离的最大值。 样例输入 25 5 2211141721 样例输出 4 说明 【输入输出样例说明】 将与起点距离为 2 和 14 的两个岩石移走后,最短的跳跃距离为 4(从与起点距离 17 的岩石跳到距离 21 的岩石,或者从距离 21 的岩石跳到终点)。 【数据范围】 对于 20%的数据,0≤M≤N≤10。对于50%的数据,0≤M≤N≤100。对于 100%的数据,0≤M≤N≤50,000,1≤L≤1,000,000,000。 题解 题意很明白，这就是一道经典的二分查找题 二分答案即可。 二分过程：如果无法找到，则缩小右边界；如果找到了，则扩大左边界。 代码 123456789101112131415161718192021222324252627282930#include &lt;cstdio&gt;using namespace std;const int maxn=50100;int d,n,m,stone[maxn];bool check(int x)&#123; int cnt=0,cur=0; for(int i=1;i&lt;=n;i++)&#123; if(stone[i]-cur&lt;x)&#123; if(++cnt&gt;m) return false; &#125; else cur=stone[i]; &#125; return true;&#125;int main()&#123; scanf("%d%d%d",&amp;d,&amp;n,&amp;m); for(int i=1;i&lt;=n;i++) scanf("%d",stone+i); int l=0,r=d; while(l&lt;=r)&#123; int mid=(l+r)&gt;&gt;1; check(mid)?l=mid+1:r=mid-1; &#125; printf("%d\n",r); return 0;&#125;]]></content>
+      <categories>
+        <category>NOIP</category>
+      </categories>
+      <tags>
+        <tag>贪心</tag>
+        <tag>NOIP</tag>
+        <tag>二分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[NOIP2011聪明的质监员]]></title>
     <url>%2F2017%2F10%2F04%2FNOIP2011%E8%81%AA%E6%98%8E%E7%9A%84%E8%B4%A8%E7%9B%91%E5%91%98%2F</url>
     <content type="text"><![CDATA[NOIP2011 聪明的质监员 题目描述 洛谷传送门 小T 是一名质量监督员，最近负责检验一批矿产的质量。这批矿产共有 n 个矿石，从 1到n 逐一编号，每个矿石都有自己的重量 wi 以及价值vi 。检验矿产的流程是： 这批矿产的检验结果Y 为各个区间的检验值之和。即：Y1+Y2…+Ym若这批矿产的检验结果与所给标准值S 相差太多，就需要再去检验另一批矿产。小T不想费时间去检验另一批矿产，所以他想通过调整参数W 的值，让检验结果尽可能的靠近标准值S，即使得S-Y 的绝对值最小。请你帮忙求出这个最小值。 输入 输入文件名为qc.in。 第一行包含三个整数n，m，S，分别表示矿石的个数、区间的个数和标准值。 接下来的n 行，每行2个整数，中间用空格隔开，第i+1 行表示 i 号矿石的重量 wi 和价值vi。接下来的m 行，表示区间，每行2 个整数，中间用空格隔开，第i+n+1 行表示区间[Li,Ri]的两个端点Li 和Ri。注意：不同区间可能重合或相互重叠。 输出 输出文件名为qc.out。 输出只有一行，包含一个整数，表示所求的最小值。 样例输入 5 3 151 52 53 54 55 51 52 43 3 样例输出 10 说明 【输入输出样例说明】 当W 选4 的时候，三个区间上检验值分别为 20、5 、0 ，这批矿产的检验结果为 25，此时与标准值S 相差最小为10。 【数据范围】 对于10% 的数据，有1≤n，m≤10；对于30% 的数据，有1≤n，m≤500；对于50% 的数据，有1≤n，m≤5,000；对于70% 的数据，有1≤n，m≤10,000；对于100%的数据，有1≤n，m≤200,000，0&lt;wi, vi≤10^6，0&lt;S≤10^12，1≤Li≤Ri≤n。 题解 易知每个区间的检验值与W的大小成负相关（不懂的可以理解为W越大检验值越小 然后我们可以二分答案（即W）到最接近S为止 代码 12345678910111213141516171819202122232425262728293031323334353637383940#include&lt;iostream&gt;#include&lt;cstring&gt;#include&lt;cstdio&gt;#include&lt;cstdlib&gt;#include&lt;cmath&gt;#include&lt;algorithm&gt;#define ll long longusing namespace std;const int maxn=200100;ll n,m,s,mx,ans=1LL&lt;&lt;60,w[maxn],v[maxn],l[maxn],r[maxn],cnt[maxn],sum[maxn];ll work(ll W)&#123; ll res=0; for(ll i=1;i&lt;=n;i++)&#123; cnt[i]=cnt[i-1]+(w[i]&gt;=W); sum[i]=sum[i-1]+(w[i]&gt;=W)*v[i]; &#125; for(ll i=1;i&lt;=m;i++) res+=(cnt[r[i]]-cnt[l[i]-1])*(sum[r[i]]-sum[l[i]-1]); return res;&#125;int main()&#123; scanf("%lld%lld%lld",&amp;n,&amp;m,&amp;s); for(ll i=1;i&lt;=n;i++) scanf("%lld%lld",w+i,v+i),mx=max(mx,w[i]); for(ll i=1;i&lt;=m;i++) scanf("%lld%lld",l+i,r+i); ll L=0,R=mx+1; while(L&lt;=R)&#123; ll mid=(L+R)&gt;&gt;1; ll t=work(mid); ans=min(ans,abs(s-t)); if(t&lt;s) R=mid-1; else L=mid+1; &#125; printf("%lld",ans); return 0;&#125;]]></content>
@@ -9,6 +35,8 @@
       </categories>
       <tags>
         <tag>NOIP</tag>
+        <tag>前缀和</tag>
+        <tag>二分</tag>
       </tags>
   </entry>
   <entry>
@@ -20,6 +48,8 @@
       </categories>
       <tags>
         <tag>Codeforces</tag>
+        <tag>贪心</tag>
+        <tag>优先队列</tag>
       </tags>
   </entry>
   <entry>
@@ -31,6 +61,10 @@
       </categories>
       <tags>
         <tag>NOIP</tag>
+        <tag>图论</tag>
+        <tag>DFS</tag>
+        <tag>BFS</tag>
+        <tag>剪枝</tag>
       </tags>
   </entry>
   <entry>
@@ -42,6 +76,8 @@
       </categories>
       <tags>
         <tag>NOIP</tag>
+        <tag>前缀和</tag>
+        <tag>二分</tag>
       </tags>
   </entry>
   <entry>

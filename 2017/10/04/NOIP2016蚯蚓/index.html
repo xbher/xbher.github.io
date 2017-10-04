@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Ekko, Blog, Node.js, Git" />
+  <meta name="keywords" content="NOIP,单调队列,模拟," />
 
 
 
@@ -97,16 +97,19 @@
 
 
 
-<meta name="description" content="深自缄默，如云漂泊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="guestbook">
-<meta property="og:url" content="http://xbher.github.io/guestbook/index.html">
+<meta name="description" content="NOIP2016蚯蚓 题目描述 洛谷传送门  本题中，我们将用符号⌊c⌋表示对c向下取整，例如：⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3 蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。 蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓">
+<meta name="keywords" content="NOIP,单调队列,模拟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NOIP2016蚯蚓">
+<meta property="og:url" content="http://xbher.github.io/2017/10/04/NOIP2016蚯蚓/index.html">
 <meta property="og:site_name" content="Echo的博客">
-<meta property="og:description" content="深自缄默，如云漂泊">
-<meta property="og:updated_time" content="2017-09-29T15:39:40.226Z">
+<meta property="og:description" content="NOIP2016蚯蚓 题目描述 洛谷传送门  本题中，我们将用符号⌊c⌋表示对c向下取整，例如：⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3 蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。 蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓">
+<meta property="og:image" content="https://i.loli.net/2017/10/04/59d48c0dadaaf.png">
+<meta property="og:updated_time" content="2017-10-04T07:52:26.643Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guestbook">
-<meta name="twitter:description" content="深自缄默，如云漂泊">
+<meta name="twitter:title" content="NOIP2016蚯蚓">
+<meta name="twitter:description" content="NOIP2016蚯蚓 题目描述 洛谷传送门  本题中，我们将用符号⌊c⌋表示对c向下取整，例如：⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3 蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。 蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓">
+<meta name="twitter:image" content="https://i.loli.net/2017/10/04/59d48c0dadaaf.png">
 
 
 
@@ -136,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://xbher.github.io/guestbook/"/>
+  <link rel="canonical" href="http://xbher.github.io/2017/10/04/NOIP2016蚯蚓/"/>
 
 
 
@@ -160,7 +163,7 @@
     }
 </style>
 
-  <title>guestbook | Echo的博客</title>
+  <title>NOIP2016蚯蚓 | Echo的博客</title>
   
 
 
@@ -541,34 +544,315 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xbher.github.io/2017/10/04/NOIP2016蚯蚓/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Echo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Echo的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">guestbook</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><blockquote class="blockquote-center"><br>    深自缄默，如云漂泊<br>    <!-- <embed src="https://music.163.com/style/swf/widget.swf?sid=413831749&type=2&auto=0&width=320&height=66" title="绅士(Cover 薛之谦)-宇西" width="340" height="86"  allowNetworking="all" oncontextmenu="return false"></embed> --><br>    <!-- <embed src="https://music.163.com/style/swf/widget.swf?sid=27955653&type=2&auto=0&width=320&height=66" title="你还要我怎样-薛之谦" width="340" height="86"  allowNetworking="all" oncontextmenu="return false"></embed> --><br>    <embed src="https://music.163.com/style/swf/widget.swf?sid=26672926&type=2&auto=0&width=320&height=66" title="Nothing To Fear - Dexter Britain" width="340" height="86" allownetworking="all" oncontextmenu="return false"><br></blockquote><br><br></p>
-
+          <h1 class="post-title" itemprop="name headline">NOIP2016蚯蚓</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-04T14:31:28+08:00">
+                2017-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NOIP/" itemprop="url" rel="index">
+                    <span itemprop="name">NOIP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">热度
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>℃
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="NOIP2016蚯蚓"><a href="#NOIP2016蚯蚓" class="headerlink" title="NOIP2016蚯蚓"></a>NOIP2016蚯蚓</h1><blockquote>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2></blockquote>
+<p><a href="https://www.luogu.org/problem/show?pid=2827" target="_blank" rel="external">洛谷传送门</a> </p>
+<p>本题中，我们将用符号<br>⌊c⌋表示对c向下取整，例如：<br>⌊3.0⌋=⌊3.1⌋=⌊3.9⌋=3</p>
+<p>蛐蛐国最近蚯蚓成灾了！隔壁跳蚤国的跳蚤也拿蚯蚓们没办法，蛐蛐国王只好去请神刀手来帮他们消灭蚯蚓。</p>
+<p>蛐蛐国里现在共有n只蚯蚓（n为正整数)。每只蚯蚓拥有长度，我们设第i只蚯蚓的长度为<br>ai(i=1,2,…,n)，并保证所有的长度都是非负整数（即:可能存在长度为0的蚯蚓）。</p>
+<p>每一秒，神刀手会在所有的蚯蚓中，准确地找到最长的那一只（如有多个则任选一个）将其切成两半。神刀手切开蚯蚓的位置由常数p(是满足0&lt;p&lt;1的有理数)决定，设这只蚯蚓长度为x，神刀手会将其切成两只长度分别为⌊px⌋和x−⌊px⌋的蚯蚓。特殊地，如果这两个数的其中一个等于0，则这个长度为0的蚯蚓也会被保留。此外，除了刚刚产生的两只新蚯蚓，其余蚯蚓的长度都会增加q(是一个非负整常数)。</p>
+<p>蛐蛐国王知道这样不是长久之计，因为蚯蚓不仅会越来越多，还会越来越长。蛐蛐国王决定求助于一位有着洪荒之力的神秘人物，但是救兵还需要m秒才能到来……(m为非负整数）</p>
+<p>蛐蛐国王希望知道这m秒内的战况。具体来说，他希望知道：</p>
+<ul>
+<li>m秒内，每一秒被切断的蚯蚓被切断前的长度（有m个数）</li>
+<li>m秒后，所有蚯蚓的长度（有n+m个数)。</li>
+</ul>
+<p>蛐蛐国王当然知道怎么做啦！但是他想考考你……</p>
+<blockquote>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2></blockquote>
+<p>输入文件名为earthworm.in。</p>
+<p>第一行包含六个整数n,m,q,u,v,t，其中：</p>
+<p>n,m,q的意义见【问题描述】；</p>
+<p>u,v,t均为正整数；</p>
+<p>你需要自己计算p=u/v(保证0&lt;u&lt;v);</p>
+<p>t是输出参数，其含义将会在【输出格式】中解释。</p>
+<p>第二行包含n个非负整数，为<br>ai,a2,…,an，即初始时n只蚯蚓的长度。</p>
+<p>同一行中相邻的两个数之间，恰好用一个空格隔开。</p>
+<p>保证<br>1≤n≤10^5​​，<br>0&lt;m≤7∗10^6​​，<br>0≤u&lt;v≤10^9​​，<br>0≤q≤200，<br>1≤t≤71，<br>0&lt;ai≤10^8​​。  </p>
+<blockquote>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2></blockquote>
+<p>输出文件名为earthworm.out。</p>
+<p>第一行输出⌊m/t⌋个整数，按时间顺序，依次输出第t秒，第2t秒，第3t秒……被切断蚯蚓（在被切断前）的长度。</p>
+<p>第二行输出⌊(n+m)/t⌋个整数，输出m秒后蚯蚓的长度；需要按从大到小的顺序，依次输出排名第t，第2t，第3t……的长度。</p>
+<p>同一行中相邻的两个数之间，恰好用一个空格隔开。即使某一行没有任何数需要 输出，你也应输出一个空行。</p>
+<p>请阅读样例来更好地理解这个格式。</p>
+<blockquote>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2></blockquote>
+<p>输入样例#1：<br>3 7 1 1 3 1<br>3 3 2  </p>
+<p>输入样例#2：<br>3 7 1 1 3 2<br>3 3 2  </p>
+<p>输入样例#3：<br>3 7 1 1 3 9<br>3 3 2  </p>
+<blockquote>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2></blockquote>
+<p>输出样例#1：<br>3 4 4 4 5 5 6<br>6 6 6 5 5 4 4 3 2 2  </p>
+<p>输出样例#2：<br>4 4 5<br>6 5 4 3 2  </p>
+<p>输出样例#3：<br>//空行<br>2  </p>
+<blockquote>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2></blockquote>
+<p>【输入输出样例说明】</p>
+<p>【样例解释1】<br>在神刀手到来前：3只蚯蚓的长度为3,3,2。</p>
+<p>1秒后：一只长度为3的蚯蚓被切成了两只长度分别为1和2的蚯蚓，其余蚯蚓的长度增加了1。最终4只蚯蚓的长度分别为(1,2),4,3。括号表示这个位置刚刚有一只蚯蚓被切断</p>
+<p>2秒后：一只长度为4的蚯蚓被切成了1和3。5只蚯蚓的长度分别为：2,3,(1,3),4。</p>
+<p>3秒后：一只长度为4的蚯蚓被切断。6只蚯蚓的长度分别为：3,4,2,4,(1,3)。</p>
+<p>4秒后：一只长度为4的蚯蚓被切断。7只蚯蚓的长度分别为：4,(1,3),3,5,2,4。</p>
+<p>5秒后：一只长度为5的蚯蚓被切断。8只蚯蚓的长度分别为：5,2,4,4,(1,4),3,5。</p>
+<p>6秒后：一只长度为5的蚯蚓被切断。9只蚯蚓的长度分别为：（1,4),3,5,5,2,5,4,6。</p>
+<p>7秒后：一只长度为6的蚯蚓被切断。10只蚯蚓的长度分别为：2,5,4,6,6,3,6,5,(2,4)。</p>
+<p>所以，7秒内被切断的蚯蚓的长度依次为3,4,4,4,5,5,6。</p>
+<p>7秒后，所有蚯蚓长度从大到小排序为6,6,6,5,5,4,4,3,2,2。</p>
+<p>【样例解释2】<br>这个数据中只有t=2与上个数据不同。只需在每行都改为每两个数输出一个数即可。</p>
+<p>虽然第一行最后有一个6没有被输出，但是第二行仍然要重新从第二个数再开始输出。</p>
+<p>【样例解释3】<br>这个数据中只有t=9与上个数据不同。</p>
+<p>注意第一行没有数要输出，但也要输出一个空行。</p>
+<p>【数据范围】</p>
+<p><img src="https://i.loli.net/2017/10/04/59d48c0dadaaf.png" alt=""></p>
+<blockquote>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2></blockquote>
+<ul>
+<li>乍一看题目，woc这一优先队列大水题啊，然后用priority_queue来xjb搞，最后发现priority_queue这个东西它没有迭代器……</li>
+<li>最后发现正解又简单又短（就是太难想了</li>
+<li>瞎扯淡结束，我们来讲题目：</li>
+</ul>
+<ol>
+<li>假设有两只蚯蚓长度分别为x，y，且x&gt;y；那么根据题意x一定被先切，于是我们假设y在x被切后i秒被切。</li>
+<li>假设x被切成x1和x2两段，y被切成y1和y2两段；</li>
+<li>易得<br>x1=⌊p<em>x1⌋+i</em>q,x2=x-(⌊p<em>x1⌋+i</em>q);<br>y1=⌊p<em>(y+i</em>q)⌋,y2=y+i<em>q-⌊p</em>(y+i*q)⌋;  </li>
+<li>由上可得x1&gt;y1;x2&gt;y2;</li>
+</ol>
+<ul>
+<li>于是我们开3个队列<br>qs存储未被切的，(已从大到小排序<br>q1存储⌊p<em>x⌋，<br>q2存储⌊x-p</em>x⌋;</li>
+<li>于是每次去3个堆首的最大元素模拟即可</li>
+<li>ps：还要保存一个时间戳表示蚯蚓增加的长度，每次取出时加上，放回时减去</li>
+</ul>
+<blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2></blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100050</span>;</div><div class="line"><span class="keyword">int</span> n,m,q,u,v,t,add,a[maxn];</div><div class="line"></div><div class="line"><span class="built_in">queue</span> &lt;<span class="keyword">int</span>&gt; qs,q1,q2;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> x&gt;y;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_front</span><span class="params">(<span class="built_in">queue</span> &lt;<span class="keyword">int</span>&gt; &amp;y)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> y.empty()?<span class="number">-0x3f3f3f</span>:y.front()+add;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare_front</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> a=get_front(qs),b=get_front(q1),c=get_front(q2),</div><div class="line">		mx=max(a,max(b,c));</div><div class="line">	<span class="keyword">if</span>(mx==a) qs.pop();</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(mx==b) q1.pop();</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(mx==c) q2.pop();</div><div class="line">	<span class="keyword">return</span> mx;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d%d%d"</span>,&amp;n,&amp;m,&amp;q,&amp;u,&amp;v,&amp;t);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,a+i);</div><div class="line">	sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>,cmp);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) qs.push(a[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;add+=q,i++)&#123;</div><div class="line">		<span class="keyword">int</span> cur=compare_front(),</div><div class="line">			l1=(<span class="keyword">long</span> <span class="keyword">long</span>)cur*u/v,</div><div class="line">			l2=cur-l1;</div><div class="line">		q1.push(l1-add-q);q2.push(l2-add-q);</div><div class="line">		<span class="keyword">if</span>(i%t==<span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"%d "</span>,cur);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n+m;i++)</div><div class="line">		i%t==<span class="number">0</span>?<span class="built_in">printf</span>(<span class="string">"%d "</span>,compare_front()):compare_front();</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>满分是10分的话，这篇文章你给几分</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/reward/reward_wechat.png" alt="Echo 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+  </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NOIP/" rel="tag"><i class="fa fa-tag"></i> NOIP</a>
+          
+            <a href="/tags/单调队列/" rel="tag"><i class="fa fa-tag"></i> 单调队列</a>
+          
+            <a href="/tags/模拟/" rel="tag"><i class="fa fa-tag"></i> 模拟</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/04/NOIP2015跳石头/" rel="next" title="NOIP2015跳石头">
+                <i class="fa fa-chevron-left"></i> NOIP2015跳石头
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -603,8 +887,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -714,6 +1007,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NOIP2016蚯蚓"><span class="nav-number">1.</span> <span class="nav-text">NOIP2016蚯蚓</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入"><span class="nav-number">1.2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">1.3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例输入"><span class="nav-number">1.4.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例输出"><span class="nav-number">1.5.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.6.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">1.7.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.8.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
