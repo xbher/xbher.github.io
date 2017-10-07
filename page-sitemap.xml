@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://xbher.github.io/guestbook/</loc>
+        <lastmod>2017-10-07T15:13:20.161Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://xbher.github.io/categories/</loc>
         <lastmod>2017-10-01T10:44:58.645Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,13 +44,6 @@
     <url>
         <loc>http://xbher.github.io/weblog/</loc>
         <lastmod>2017-09-30T11:52:58.843Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://xbher.github.io/guestbook/</loc>
-        <lastmod>2017-09-29T15:39:40.226Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

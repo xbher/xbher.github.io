@@ -21,9 +21,9 @@
         <category>NOIP</category>
       </categories>
       <tags>
+        <tag>贪心</tag>
         <tag>NOIP</tag>
         <tag>二分</tag>
-        <tag>贪心</tag>
       </tags>
   </entry>
   <entry>
@@ -47,8 +47,8 @@
         <category>Codeforces</category>
       </categories>
       <tags>
-        <tag>贪心</tag>
         <tag>Codeforces</tag>
+        <tag>贪心</tag>
         <tag>优先队列</tag>
       </tags>
   </entry>
