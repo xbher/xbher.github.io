@@ -72,13 +72,6 @@
     </url>
 
     <url>
-        <loc>http://xbher.github.io/tags/NOIP/</loc>
-        <lastmod>2017-10-04T08:18:09.534Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://xbher.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</loc>
         <lastmod>2017-10-04T08:18:09.534Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -88,6 +81,13 @@
     <url>
         <loc>http://xbher.github.io/tags/%E6%A8%A1%E6%8B%9F/</loc>
         <lastmod>2017-10-04T08:18:09.534Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://xbher.github.io/tags/NOIP/</loc>
+        <lastmod>2017-11-07T05:05:44.582Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
