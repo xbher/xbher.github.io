@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xbher.github.io/"/>
-  <updated>2017-11-07T05:05:44.582Z</updated>
+  <updated>2017-11-07T05:22:36.428Z</updated>
   <id>http://xbher.github.io/</id>
   
   <author>
@@ -20,23 +20,21 @@
     <title>noip注意事项</title>
     <link href="http://xbher.github.io/2017/11/07/noip%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
     <id>http://xbher.github.io/2017/11/07/noip注意事项/</id>
-    <published>2017-11-07T04:42:03.000Z</published>
-    <updated>2017-11-07T05:05:44.582Z</updated>
+    <published>2017-11-07T05:19:58.000Z</published>
+    <updated>2017-11-07T05:22:36.428Z</updated>
     
-    <content type="html"><![CDATA[<p>#noip注意事项</p><p>1.暴力+玄学优化正解骗分法（即判断数据规模if(n&lt;=xxx) 用暴力法，else 打上自己的不确定算法）</p><p>2.定义long long保智商</p><p>3.快速读入是个好东西</p><p>4.多组数据记得初始化变量和数组。</p><p>5.习惯用#define，这会让你的代码好写许多：</p><p>比如（参考大佬习惯）：</p><p> #define ll long long</p><p> #define R register int//一开始我也不知道是什么，但后来查了，原来是将一个变量存到cpu的位置，</p><p>调用就快很多，而且听说内存也可以减少？但不能这样定义太多变量，一般for循环时定义一下即可。</p><p> #define il inline</p><p> #define N 100005//这里的N一般是用在数组上的，如int f[N],c[N];这样改大小时，只需对N进行操作。</p><p>6.若不是必须返回值的函数，最好用void，而且据我看大佬的习惯，他们通常用在函数类型前加个inline,虽然我也不知道有什么用，但据说调用会快一些。</p><p>7.全局变量默认为0</p><p>8.打分号，括号，return 0。</p><p>9.同名变量导致混乱：最简单的办法是保证每个变量都不重名，忽略大小写之后仍然不重名。</p><p>10.能打scanf和printf就别用cin和cout，因为后两者较慢。（我才不会告诉你我平时开了std::ios::sync_with_stdio(false);然后接着用cin和cout</p><p>11.if的== （解决方法有1.开-wall来 <del>续命</del> 2.换成如2333==a型）</p><p>12.编完成程序后，先检查循环体有没有写错，主要是变量那里，自加和自减搞反，会让你想死。</p><p>13.字符串输入多打几个scanf（我才不会告诉你当初被scanf秀了一脸）</p><p>14.检查的几个习惯：</p><p>查死循环：找到循环体，然后在开头加上printf(“Orz”);要是运行后不停出现Orz，就说明是这里有死循环。<img src="http://ow23i6mni.bkt.clouddn.com/17-11-7/81385854.jpg" alt=""></p><p>查某语句是否使用：在该语句下随便加上输出某段话的代码。</p><p>查变量就不用说了吧，输出即可。</p><p>15.中间值溢出：lcm = a<em>b/gcd(a,b); 如果a和b都比较大，很容易发生溢出。（正确写法 <del>姿势</del> lcm=a/gcd(a,b)</em>b）</p><p>16.格式错误、文件名错误、文件放错位置……：这些错误的原因都是没有审好题，没有认真查看主办方的规定。所以，大家千万不要犯此类错误！</p><p>17.调试代码在不用时，不应该直接删除，而是应该注释掉，以免给重新使用带来麻烦。</p><p>18.做大改动时记住ctrl a,c,v存一份</p><p>19.认真审题</p><p>20.关于==误写成=，直接把右值写在左边就好了。比如a==3写成3==a，这样即使写错编译器也会报错</p><p>21.双向边数组开两倍，线段树四倍之类的……</p><p>22.断言(assert(), 在头文件<cassert>中), 当表达式为假时强行结束程序，并给出错误信息(另一种方法是if(表达式){printf(“ERRORmsg\n”); abort();})</cassert></p><p>写在最后：有效的程序员不应该浪费很多时间用于程序调试，他们应该一开始就不要把故障引入。——Edsger Wybe Dijkstra<br>最后祝noip2017RP++</p><blockquote><p>本文由博主整理自洛谷讨论区，并添加了自己的一些经验。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="noip注意事项"><a href="#noip注意事项" class="headerlink" title="noip注意事项"></a>noip注意事项</h1><p>1.暴力+玄学优化正解骗分法（即判断数据规模if(n&lt;=xxx) 用暴力法，else 打上自己的不确定算法）</p><p>2.定义long long保智商</p><p>3.快速读入是个好东西</p><p>4.多组数据记得初始化变量和数组。</p><p>5.习惯用#define，这会让你的代码好写许多：</p><p>比如（参考大佬习惯）：</p><p>#define ll long long</p><p>#define R register int//一开始我也不知道是什么，但后来查了，原来是将一个变量存到cpu的位置，</p><p>调用就快很多，而且听说内存也可以减少？但不能这样定义太多变量，一般for循环时定义一下即可。</p><p>#define il inline</p><p>#define N 100005//这里的N一般是用在数组上的，如int f[N],c[N];这样改大小时，只需对N进行操作。</p><p>6.若不是必须返回值的函数，最好用void，而且据我看大佬的习惯，他们通常用在函数类型前加个inline,虽然我也不知道有什么用，但据说调用会快一些。</p><p>7.全局变量默认为0</p><p>8.打分号，括号，return 0。</p><p>9.同名变量导致混乱：最简单的办法是保证每个变量都不重名，忽略大小写之后仍然不重名。</p><p>10.能打scanf和printf就别用cin和cout，因为后两者较慢。（我才不会告诉你我平时开了std::ios::sync_with_stdio(false);然后接着用cin和cout</p><p>11.if的== （解决方法有1.开-wall来 续命 2.换成如2333==a型）</p><p>12.编完成程序后，先检查循环体有没有写错，主要是变量那里，自加和自减搞反，会让你想死。</p><p>13.字符串输入多打几个scanf（我才不会告诉你当初被scanf秀了一脸）</p><p>14.检查的几个习惯：</p><p>查死循环：找到循环体，然后在开头加上printf(“Orz”);要是运行后不停出现Orz，就说明是这里有死循环。<img src="http://ow23i6mni.bkt.clouddn.com/17-11-7/81385854.jpg" alt=""></p><p>查某语句是否使用：在该语句下随便加上输出某段话的代码。</p><p>查变量就不用说了吧，输出即可。</p><p>15.中间值溢出：lcm = ab/gcd(a,b); 如果a和b都比较大，很容易发生溢出。（正确写法 姿势 lcm=a/gcd(a,b)b）</p><p>16.格式错误、文件名错误、文件放错位置……：这些错误的原因都是没有审好题，没有认真查看主办方的规定。所以，大家千万不要犯此类错误！</p><p>17.调试代码在不用时，不应该直接删除，而是应该注释掉，以免给重新使用带来麻烦。</p><p>18.做大改动时记住ctrl a,c,v存一份</p><p>19.认真审题</p><p>20.关于==误写成=，直接把右值写在左边就好了。比如a==3写成3==a，这样即使写错编译器也会报错</p><p>21.双向边数组开两倍，线段树四倍之类的……</p><p>22.断言(assert(), 在头文件中), 当表达式为假时强行结束程序，并给出错误信息(另一种方法是if(表达式){printf(“ERRORmsg\n”); abort();})</p><p>写在最后：有效的程序员不应该浪费很多时间用于程序调试，他们应该一开始就不要把故障引入。——Edsger Wybe Dijkstra<br>最后祝noip2017RP++</p><blockquote><p>本文由博主整理自洛谷讨论区，并添加了自己的一些经验。</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#noip注意事项&lt;/p&gt;
-&lt;p&gt;1.暴力+玄学优化正解骗分法（即判断数据规模if(n&amp;lt;=xxx) 用暴力法，else 打上自己的不确定算法）&lt;/p&gt;
-&lt;p&gt;2.定义long long保智商&lt;/p&gt;
-&lt;p&gt;3.快速读入是个好东西&lt;/p&gt;
-&lt;p&gt;4.多组数据记得初始化变
+        &lt;h1 id=&quot;noip注意事项&quot;&gt;&lt;a href=&quot;#noip注意事项&quot; class=&quot;headerlink&quot; title=&quot;noip注意事项&quot;&gt;&lt;/a&gt;noip注意事项&lt;/h1&gt;&lt;p&gt;1.暴力+玄学优化正解骗分法（即判断数据规模if(n&amp;lt;=xxx) 用暴力法，else 
       
     
     </summary>
+    
+      <category term="NOIP" scheme="http://xbher.github.io/categories/NOIP/"/>
     
     
       <category term="NOIP" scheme="http://xbher.github.io/tags/NOIP/"/>
@@ -95,11 +93,11 @@
       <category term="NOIP" scheme="http://xbher.github.io/categories/NOIP/"/>
     
     
+      <category term="贪心" scheme="http://xbher.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
       <category term="NOIP" scheme="http://xbher.github.io/tags/NOIP/"/>
     
       <category term="二分" scheme="http://xbher.github.io/tags/%E4%BA%8C%E5%88%86/"/>
-    
-      <category term="贪心" scheme="http://xbher.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
@@ -154,9 +152,9 @@
       <category term="Codeforces" scheme="http://xbher.github.io/categories/Codeforces/"/>
     
     
-      <category term="贪心" scheme="http://xbher.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
       <category term="Codeforces" scheme="http://xbher.github.io/tags/Codeforces/"/>
+    
+      <category term="贪心" scheme="http://xbher.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
       <category term="优先队列" scheme="http://xbher.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
